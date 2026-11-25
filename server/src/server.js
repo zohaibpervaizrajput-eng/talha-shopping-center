@@ -1,0 +1,18 @@
+import dotenv from 'dotenv';
+dotenv.config();
+import mongoose from 'mongoose';
+import app from './app.js';
+
+mongoose.connect(process.env.MONGO_URI)
+  .then(()=> console.log('MongoDB connected ✅'))
+  .catch(e=>{ console.error(e); process.exit(1) });
+
+  import { v2 as cloudinary } from 'cloudinary';
+
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+});
+
+app.listen(process.env.PORT || 5000, ()=> console.log(`Server on ${process.env.PORT || 5000}`));

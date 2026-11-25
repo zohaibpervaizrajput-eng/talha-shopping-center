@@ -1,0 +1,6 @@
+import { useState } from 'react';
+import { authAPI } from '../services/api';
+export default function Forgot() {
+  const [email, setEmail] = useState(''); const [msg, setMsg] = useState('');
+  return <div className="max-w-md mx-auto px-4 py-12"><div className="border rounded-3xl p-6"><h1 className="text-2xl font-bold">Forgot Password</h1><p className="text-sm text-gray-500 mt-1">Reset link will come on email.</p>{msg && <div className="bg-green-50 p-3 rounded-xl mt-3 text-sm">{msg}</div>}<form className="mt-4" onSubmit={async e => { e.preventDefault(); try { const { data } = await authAPI.forgot({ email }); setMsg(data.message || 'Check your email for reset link'); } catch (er) { setMsg(er.response?.data?.message || 'Failed'); } }}><input required type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email" className="w-full border rounded-xl px-4 py-3" /><button className="w-full bg-[#111111] text-white py-3 rounded-full mt-3">Send Reset Link</button></form></div></div>;
+}

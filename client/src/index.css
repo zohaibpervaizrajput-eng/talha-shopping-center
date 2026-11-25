@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@theme {
+  --color-gold: #D4AF37;
+  --color-gold-light: #E8D7A0;
+  --color-black-lux: #111111;
+  --color-cream: #F8F6F1;
+  --color-charcoal: #252525;
+}
+body { background: #FFFFFF; color: #252525; font-family: Inter, system-ui, sans-serif; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+

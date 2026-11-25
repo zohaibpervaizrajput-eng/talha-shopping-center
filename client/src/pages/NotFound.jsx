@@ -1,0 +1,2 @@
+import { Link } from 'react-router-dom';
+export default function NotFound() { return <div className="text-center py-24 px-4"><div className="text-7xl">💎</div><h1 className="text-5xl font-bold mt-4">404</h1><p className="text-gray-500 mt-2">This page not found. Maybe jewellery went somewhere else!</p><div className="flex gap-3 justify-center mt-6"><Link to="/" className="bg-[#111111] text-white px-6 py-2 rounded-full">Go Home</Link><Link to="/products" className="border px-6 py-2 rounded-full">Shop Jewellery</Link></div></div>; }
