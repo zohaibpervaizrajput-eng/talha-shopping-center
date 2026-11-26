@@ -16,16 +16,21 @@ export const generateTokens = (userId, role) => {
 
 export const setAuthCookies = (res, tokens) => {
   res.cookie('accessToken', tokens.accessToken, {
-    httpOnly: true, secure: process.env.NODE_ENV === 'production',
-    sameSite: 'lax', maxAge: 15 * 60 * 1000,
+    httpOnly: true,
+    secure: true,
+    sameSite: 'none',
+    maxAge: 15 * 60 * 1000,
   });
   res.cookie('refreshToken', tokens.refreshToken, {
-    httpOnly: true, secure: process.env.NODE_ENV === 'production',
-    sameSite: 'lax', maxAge: 7 * 24 * 60 * 60 * 1000, path: '/api/auth/refresh'
+    httpOnly: true,
+    secure: true,
+    sameSite: 'none',
+    maxAge: 7 * 24 * 60 * 60 * 1000,
+    path: '/api/auth/refresh'
   });
 };
 
 export const clearAuthCookies = (res) => {
-  res.clearCookie('accessToken');
-  res.clearCookie('refreshToken', { path: '/api/auth/refresh' });
+  res.clearCookie('accessToken', { secure: true, sameSite: 'none' });
+  res.clearCookie('refreshToken', { path: '/api/auth/refresh', secure: true, sameSite: 'none' });
 };
