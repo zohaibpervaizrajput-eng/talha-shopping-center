@@ -4,7 +4,7 @@ import { Heart, ShoppingBag, User, Phone, Menu, X, Flame, Sparkles, MapPin, Mail
 import { useCart } from '../context/CartContext.jsx';
 import { useSettings } from '../context/SettingsContext.jsx';
 import { categoryAPI, productAPI } from '../services/api';
-import logo from '../assets/talha-logo.png.jpeg'
+import logo from '../assets/shopweb.png'
 import { useAuth } from '../context/AuthContext.jsx';
 
 export default function Layout() {
