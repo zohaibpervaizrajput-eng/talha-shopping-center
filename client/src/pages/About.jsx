@@ -40,7 +40,7 @@ export default function About() {
         <div className="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=1200')] bg-cover bg-center" />
         <div className="relative max-w-4xl mx-auto px-4 text-center animate-[fadeIn_0.8s_ease]">
           <div className={newLocal}>✦ EST. 2020 • PAKISTAN ✦</div>
-          <h1 className="text-4xl md:text-6xl font-bold mt-4 leading-tight">About <span className="text-gold">TALHA</span><br />Shopin Center</h1>
+          <h1 className="text-4xl md:text-6xl font-bold mt-4 leading-tight">About <span className="text-gold">Nisa</span><br />Collection</h1>
           <p className="text-gray-300 mt-4 max-w-2xl mx-auto">Where every piece is not just jewellery, it is a <b className="text-white">story</b>. Elegance, trust and premium quality - this is our identity.</p>
           <div className="flex gap-3 justify-center mt-6">
             <Link to="/products" className="bg-gold text-black px-6 py-3 rounded-full font-bold hover:scale-105 hover:shadow-[0_0_25px_#D4AF37] transition-all duration-300">Shop Collection →</Link>
