@@ -23,11 +23,11 @@ const [showUserMenu, setShowUserMenu] = useState(false);
   const [subscribed, setSubscribed] = useState(false);
 
   // ★★★ ADMIN + BACKEND SE - Sab kuch Settings se ★★★
-  const siteName = settings.siteName || 'TALHA';
-  const siteSub = settings.siteTagline || 'SHOPING CENTER';
+  const siteName = settings.siteName || 'Nisa';
+  const siteSub = settings.siteTagline || 'Collection';
   const phone = settings.phone || settings.whatsapp || '0300-1234567';
   const emailAdmin = settings.email || 'talha@example.com';
-  const address = settings.address || 'Main Bazar, Sialkot, Pakistan';
+  const address = settings.address || 'Main Bazar, pasrur, Pakistan';
   const hours = settings.workingHours || 'Mon - Sat: 10 AM - 10 PM';
   const aboutShort = settings.aboutShort || 'Premium handmade jewellery - Gold Plated, Long Lasting Shine. Shadi, Party ya Gift - har lamhe ke liye.';
   const waLink = `https://wa.me/92${String(phone).replace(/\D/g, '').slice(-10)}?text=${encodeURIComponent('Assalam-o-Alaikum! Order karna hai.')}`;
